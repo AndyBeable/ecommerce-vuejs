@@ -1,15 +1,18 @@
 <template>
   <div id="app">
     <Navbar />
+    <ProductCard />
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar"
+import ProductCard from "./components/ProductCard"
 
 export default {
   name: 'App',
   components: {
+    ProductCard,
     Navbar
   }
 }

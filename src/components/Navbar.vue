@@ -14,12 +14,16 @@
   </ul>
 
   <div class="icon">
-    <i @click="toggleMobileNav" v-show="mobile" class="fas fa-bars" :class="[mobileNav ? 'fa-bars' :'fa-bars' ]"></i>
+    <i @click="toggleMobileNav" v-show="mobile" class="fas fa-bars" :class="[mobileNav ? 'fa-times' :'fa-bars' ]"></i>
   </div>
 
 
   <transition name="mobile-nav">
+
     <ul v-show="mobileNav" class="dropdown-nav">
+
+
+
       <li><router-link class="link" :to="{name: 'Home'}">Home</router-link></li>
       <li><router-link class="link" :to="{name: ''}">Collection</router-link></li>
       <li><router-link class="link" :to="{name: ''}">Men</router-link></li>
@@ -87,6 +91,7 @@ header {
   position: fixed;
   transition: 0.5s ease all;
 
+
   nav {
     position: relative;
     display: flex;
@@ -100,7 +105,7 @@ header {
     }
     ul,
     .link {
-      font-weight: 500;
+      font-weight: 700;
       color: #000;
       list-style: none;
       text-decoration: none;
@@ -125,7 +130,7 @@ header {
       align-items: center;
 
       img {
-        width: 100px;
+        width: 150px;
         transition: 0.5s ease all;
       }
     }
