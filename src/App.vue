@@ -26,4 +26,7 @@ export default {
   box-sizing: border-box;
   font-family: 'Kumbh Sans';
 }
+p {
+  color: #69797D
+}
 </style>
