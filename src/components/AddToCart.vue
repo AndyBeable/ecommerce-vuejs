@@ -16,6 +16,9 @@ export default {
   },
   methods: {
     removeFromCart() {
+      if(this.counter <= 0 ) {
+        return
+      }
       this.counter = this.counter - 1;
     },
     addToCart() {
