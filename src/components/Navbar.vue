@@ -5,7 +5,7 @@
     <img src="@/assets/logo.svg" alt="Logo">
   </div>
   <div class="icon">
-    <i @click="toggleMobileNav" v-show="mobile" class="fas fa-bars" :class="[mobileNav ? 'fa-times' :'fa-bars' ]"></i>
+    <i @click="toggleMobileNav" v-show="mobile" class="fas fa-bars" :class="[mobileNav ? 'fa-bars' :'fa-bars' ]"></i>
   </div>
   <transition name="mobile-nav">
     <ul v-show="mobileNav" class="navigation">
@@ -36,9 +36,14 @@ export default {
   data() {
     return {
       scrollPosition: null,
-      mobile: false,
-      mobileNav: null,
+      mobile: true,
+      mobileNav: true,
       windowWidth: null
+    }
+  },
+  methods: {
+    toggleMobileNav() {
+      this.mobileNav = !this.mobileNav
     }
   }
 }
@@ -126,4 +131,22 @@ i {
   font-size: 24px;
   transition: .8s ease all;
 }
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  background-color: red;
+  top: 0;
+  left: 0;
+}
+
+.dropdown li {
+  margin-left: 0;
+}
+
+
 </style>
