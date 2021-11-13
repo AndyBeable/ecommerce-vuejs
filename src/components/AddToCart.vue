@@ -1,14 +1,27 @@
 <template>
 <div class="counter-container">
-  <button>-</button>
-  <span>0</span>
-  <button>+</button>
+  <button @click="removeFromCart">-</button>
+  <span>{{counter}}</span>
+  <button @click="addToCart">+</button>
 </div>
 </template>
 
 <script>
 export default {
-  name: "AddToCart"
+  name: "AddToCart",
+  data() {
+    return {
+      counter: 0
+    }
+  },
+  methods: {
+    removeFromCart() {
+      this.counter = this.counter - 1;
+    },
+    addToCart() {
+      this.counter = this.counter + 1;
+    }
+  }
 }
 </script>
 
@@ -28,6 +41,7 @@ button {
   color: #FF7E1B;
   border: none;
   background: hsl(223, 64%, 98%);
+  cursor: pointer;
 }
 span {
   font-weight: 700;
