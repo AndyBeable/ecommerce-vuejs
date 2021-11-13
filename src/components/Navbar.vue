@@ -49,13 +49,17 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 header {
   background-color: lightblue;
   z-index: 99;
   width: 100%;
   position: fixed;
   transition: .5s ease all;
+
+  & nav {
+    color: red;
+  }
 }
 
 nav {
