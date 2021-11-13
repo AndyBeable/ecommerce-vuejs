@@ -85,7 +85,7 @@ export default {
 <style scoped lang="scss">
 
 header {
-  background-color: lightgray;
+  background-color: #fff;
   z-index: 99;
   width: 100%;
   position: fixed;
@@ -153,6 +153,7 @@ header {
         cursor: pointer;
         font-size: 24px;
         transition: 0.8s ease all;
+        color: #69797D
       }
     }
     .dropdown-nav {

@@ -8,14 +8,24 @@
   </header>
     <div class="details-copy">
       <p class="description">{{product.description}}</p>
-      <p class="price">{{product.price}}</p>
+      <div class="price-container">
+        <div class="sale">
+          <p class="price">{{product.price}}</p>
+         <p class="discount">50%</p>
+        </div>
+        <p class="previous-price">$250.00</p>
+      </div>
     </div>
+  <AddToCart />
 </div>
 </template>
 
 <script>
+import AddToCart from "./AddToCart"
+
 export default {
   name: "ProductDetails",
+  components: {AddToCart},
   props: ['product']
 }
 </script>
@@ -23,6 +33,10 @@ export default {
 <style scoped lang="scss">
 .details-container {
   padding: 1rem;
+}
+
+.details-copy {
+  margin-bottom: 2rem;
 }
 .titles {
   h5 {
@@ -39,10 +53,37 @@ export default {
 .description {
   margin-bottom: 1.5rem
 }
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sale {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+
 .price {
   color: #000;
   font-weight: 700;
   font-size: 40px;
+}
+.discount {
+  color: #FF7E1B;
+  font-weight: 700;
+  background: hsl(26, 100%, 55%, .2);
+  padding: 3px 6px;
+  border-radius: 3px;
+}
+
+.previous-price {
+  font-weight: 700;
+  text-decoration: line-through;
+  color: #B6BCC8;
 }
 
 

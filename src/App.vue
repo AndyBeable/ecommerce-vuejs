@@ -27,6 +27,8 @@ export default {
   font-family: 'Kumbh Sans';
 }
 p {
-  color: #69797D
+  color: #69797D;
+  line-height: 1.5rem;
+  letter-spacing: 1.5px;
 }
 </style>
