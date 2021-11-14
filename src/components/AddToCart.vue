@@ -1,9 +1,15 @@
 <template>
-<div class="counter-container">
+  <div>
+<div class="quantity-container">
   <button @click="decreaseQuantity">-</button>
   <span>{{quantity}}</span>
   <button @click="increaseQuantity">+</button>
 </div>
+    <button class="add-to-checkout">
+      <img src="../assets/icon-cart.svg" alt="">
+      Add to cart
+    </button>
+  </div>
 </template>
 
 <script>
@@ -28,8 +34,8 @@ export default {
 }
 </script>
 
-<style scoped>
-.counter-container {
+<style scoped lang="scss">
+.quantity-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -41,7 +47,7 @@ export default {
 button {
   font-size: 26px;
   font-weight: 700;
-  color: #FF7E1B;
+  /*color: #FF7E1B;*/
   border: none;
   background: hsl(223, 64%, 98%);
   cursor: pointer;
@@ -49,5 +55,23 @@ button {
 span {
   font-weight: 700;
   color: #000;
+}
+
+.add-to-checkout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FF7E1B;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1.2px;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 7px;
+
+  img {
+    height: 24px;
+    margin-right: 1rem;
+  }
 }
 </style>
