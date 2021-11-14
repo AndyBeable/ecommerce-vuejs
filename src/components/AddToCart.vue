@@ -1,8 +1,8 @@
 <template>
 <div class="counter-container">
-  <button @click="removeFromCart">-</button>
-  <span>{{counter}}</span>
-  <button @click="addToCart">+</button>
+  <button @click="decreaseQuantity">-</button>
+  <span>{{quantity}}</span>
+  <button @click="increaseQuantity">+</button>
 </div>
 </template>
 
@@ -11,18 +11,18 @@ export default {
   name: "AddToCart",
   data() {
     return {
-      counter: 0
+      quantity: 0
     }
   },
   methods: {
-    removeFromCart() {
-      if(this.counter <= 0 ) {
+    decreaseQuantity() {
+      if(this.quantity <= 0 ) {
         return
       }
-      this.counter = this.counter - 1;
+      this.quantity = this.quantity - 1;
     },
-    addToCart() {
-      this.counter = this.counter + 1;
+    increaseQuantity() {
+      this.quantity = this.quantity + 1;
     }
   }
 }

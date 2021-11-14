@@ -53,21 +53,11 @@ export default {
     window.addEventListener('resize', this.checkScreen);
     this.checkScreen()
   },
-  mounted() {
-    window.addEventListener('scroll', this.updateScroll)
-  },
   methods: {
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav
     },
-    updateScroll() {
-      const scrollPosition = window.scrollY
-      if(scrollPosition > 50) {
-        this.scrolledNav = true
-        return
-      }
-      this.scrolledNav = false
-    },
+
     checkScreen() {
       this.windowWidth = window.innerWidth
       if(this.windowWidth <= 750) {
@@ -185,22 +175,6 @@ header {
     }
     .mobile-nav-enter-to {
       transform: translateX(0);
-    }
-  }
-}
-.scrolled-nav {
-  background-color: gray;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0, 0.1), 0 2px 4px -1px rgba(0,0,0, 0.06);
-
-  nav {
-    padding: 8px 0;
-
-    .branding {
-      img {
-        width: 150px;
-        box-shadow: 0 4px 6px -1px rgba(0,0,0, 0.1), 0 2px 4px -1px rgba(0,0,0, 0.06);
-
-      }
     }
   }
 }
