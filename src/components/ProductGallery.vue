@@ -1,12 +1,12 @@
 <template>
   <div class="image-container">
 
-    <img src="../assets/image-product-1.jpg" alt="">
+    <img :src="images[index]" alt="">
 
     <div class="gallery-buttons">
 
       <button  @click="previousImage" class="gallery-button">
-        <img src="../assets/icon-previous.svg" alt="" class="icon-next">
+        <img src="../assets/icon-previous.svg" alt="">
       </button>
 
       <button @click="nextImage" class="gallery-button">
@@ -21,12 +21,45 @@
 
 export default {
   name: "ProductGallery",
+  props: {
+    thumbnail: {
+      type: String,
+      required: true
+    },
+    images: {
+      type: Array,
+      required: true
+    }
+  },
+  data() {
+    return {
+      isVisible: false,
+      index: 0
+    }
+  },
   methods: {
+    showGallery() {
+      this.isVisible = true
+    },
+    hideGallery() {
+      this.isVisible = false
+      this.index = 0;
+    },
+    hasNextImage() {
+      return this.index + 1 < this.images.length
+    },
+    hasPreviousImage() {
+      return this.index - 1 >= 0;
+    },
     nextImage() {
-      console.log('next image')
+      if(this.hasNextImage()) {
+        this.index += 1;
+      }
     },
     previousImage() {
-      console.log('prev image')
+      if(this.hasPreviousImage()) {
+        this.index -=1;
+      }
     }
   }
 
