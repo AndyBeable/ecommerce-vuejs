@@ -14,6 +14,11 @@ export default {
   components: {
     ProductCard,
     Navbar
+  },
+  data() {
+    return {
+      cart: 0
+    }
   }
 }
 </script>
