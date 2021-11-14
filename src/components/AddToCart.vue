@@ -25,10 +25,10 @@ export default {
       if(this.quantity <= 0 ) {
         return
       }
-      this.quantity = this.quantity - 1;
+      this.quantity = this.quantity-= 1;
     },
     increaseQuantity() {
-      this.quantity = this.quantity + 1;
+      this.quantity = this.quantity+= 1;
     }
   }
 }
@@ -68,6 +68,7 @@ span {
   width: 100%;
   padding: 1rem;
   border-radius: 7px;
+  box-shadow: 0px 2px 11px 4px rgba(0,0,0,0.34);
 
   img {
     height: 24px;

@@ -5,11 +5,11 @@
 
     <div class="gallery-buttons">
 
-      <button class="gallery-button">
+      <button  @click="previousImage" class="gallery-button">
         <img src="../assets/icon-previous.svg" alt="" class="icon-next">
       </button>
 
-      <button class="gallery-button">
+      <button @click="nextImage" class="gallery-button">
         <img src="../assets/icon-next.svg" alt="" class="icon-next">
       </button>
 
@@ -20,7 +20,15 @@
 
 
 export default {
-  name: "ProductGallery"
+  name: "ProductGallery",
+  methods: {
+    nextImage() {
+      console.log('next image')
+    },
+    previousImage() {
+      console.log('prev image')
+    }
+  }
 
 }
 </script>
