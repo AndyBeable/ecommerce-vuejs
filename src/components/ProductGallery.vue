@@ -1,9 +1,21 @@
 <template>
   <div class="image-container">
+
     <img src="../assets/image-product-1.jpg" alt="">
+
+    <div class="gallery-buttons">
+
+      <button class="gallery-button">
+        <img src="../assets/icon-previous.svg" alt="" class="icon-next">
+      </button>
+
+      <button class="gallery-button">
+        <img src="../assets/icon-next.svg" alt="" class="icon-next">
+      </button>
+
+    </div>
   </div>
 </template>
-
 <script>
 
 
@@ -13,8 +25,36 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.image-container {
+  position: relative;
+}
+
+.gallery-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  right: 15px;
+
+
+}
+
+.gallery-button {
+  padding: 15px 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+}
+
 img {
   width: 100%;
 }
+
+
 </style>
