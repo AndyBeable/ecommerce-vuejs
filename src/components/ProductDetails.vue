@@ -45,7 +45,7 @@ export default {
 }
 .titles {
   h5 {
-    color: #FF7E1B;
+    color: var(--orange);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 1rem;
@@ -73,12 +73,12 @@ export default {
 }
 
 .price {
-  color: #000;
+  color: var(--black);
   font-weight: 700;
   font-size: 40px;
 }
 .discount {
-  color: #FF7E1B;
+  color: var(--orange);
   font-weight: 700;
   background: hsl(26, 100%, 55%, .2);
   padding: 3px 6px;

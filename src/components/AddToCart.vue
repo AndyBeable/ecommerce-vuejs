@@ -54,15 +54,15 @@ button {
 }
 span {
   font-weight: 700;
-  color: #000;
+  color: var(--black);
 }
 
 .add-to-checkout {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #FF7E1B;
-  color: #fff;
+  background: var(--orange);
+  color: var(--white);
   font-size: 18px;
   letter-spacing: 1.2px;
   width: 100%;

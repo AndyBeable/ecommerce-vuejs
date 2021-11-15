@@ -87,7 +87,7 @@ export default {
 .gallery-button {
   padding: 15px 15px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: var(--white);
   display: inline-flex;
   align-items: center;
   border: none;
@@ -96,6 +96,4 @@ export default {
 img {
   width: 100%;
 }
-
-
 </style>
