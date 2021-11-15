@@ -1,13 +1,17 @@
 <template>
 <div class="details-container">
+
   <header>
     <div class="titles">
     <h5>{{ product.brand }}</h5>
     <h1>{{ product.item }}</h1>
     </div>
   </header>
+
     <div class="details-copy">
+
       <p class="description">{{product.description}}</p>
+
       <div class="price-container">
         <div class="sale">
           <p class="price">{{product.price}}</p>
@@ -15,6 +19,7 @@
         </div>
         <p class="previous-price">$250.00</p>
       </div>
+
     </div>
   <AddToCart />
 </div>

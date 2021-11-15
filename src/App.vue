@@ -25,6 +25,13 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+  --white: hsl(0, 0%, 100%);
+  --orange: hsl(26, 100%, 55%);
+  --grey: hsl(192, 9%, 45%);
+  --black: hsl(220, 13%, 13%)
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -32,7 +39,7 @@ export default {
   font-family: 'Kumbh Sans';
 }
 p {
-  color: #69797D;
+  color: var(--grey);
   line-height: 1.5rem;
   letter-spacing: 1.5px;
 }

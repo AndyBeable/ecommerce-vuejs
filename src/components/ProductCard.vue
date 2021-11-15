@@ -1,7 +1,10 @@
 <template>
   <div class="wrapper">
+
     <ProductGallery :thumbnail="images[0]" :images="images" />
+
     <ProductDetails :product="product"/>
+
   </div>
 </template>
 
@@ -20,10 +23,10 @@ export default {
         price: '$125.00'
       },
       images: [
-        '/assets/image-product-1.jpg',
-        '../assets/image-product-2.jpg',
-        '../assets/image-product-3.jpg',
-        '../assets/image-product-4.jpg'
+        '../assets/one.jpg',
+        '../assets/two.jpg',
+        '../assets/three.jpg',
+        '../assets/four.jpg'
       ]
     }
   }

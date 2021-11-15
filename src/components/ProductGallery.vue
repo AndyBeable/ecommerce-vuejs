@@ -1,6 +1,5 @@
 <template>
   <div class="image-container">
-
     <img :src="images[index]" alt="">
 
     <div class="gallery-buttons">
@@ -14,6 +13,7 @@
       </button>
 
     </div>
+
   </div>
 </template>
 <script>
@@ -38,13 +38,13 @@ export default {
     }
   },
   methods: {
-    showGallery() {
-      this.isVisible = true
-    },
-    hideGallery() {
-      this.isVisible = false
-      this.index = 0;
-    },
+    // showGallery() {
+    //   this.isVisible = true
+    // },
+    // hideGallery() {
+    //   this.isVisible = false
+    //   this.index = 0;
+    // },
     hasNextImage() {
       return this.index + 1 < this.images.length
     },
