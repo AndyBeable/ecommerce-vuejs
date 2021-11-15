@@ -69,6 +69,11 @@ span {
   padding: 1rem;
   border-radius: 7px;
   box-shadow: 0px 2px 11px 4px rgba(0,0,0,0.34);
+  transition: .2s ease-in-out all;
+
+  &:hover {
+    opacity: .8;
+  }
 
   img {
     height: 24px;
