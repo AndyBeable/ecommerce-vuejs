@@ -42,6 +42,7 @@ export default {
   background: hsl(223, 64%, 98%);
   padding: 1rem 1rem;
   border-radius: 6px;
+  margin-bottom: 1rem;
 }
 
 button {

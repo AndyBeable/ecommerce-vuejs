@@ -1,19 +1,19 @@
 <template>
-<header :class="{ 'scrolled-nav' : scrolledNav}">
+<header>
 <nav>
-  <div class="branding">
+  <div class="header">
     <img src="@/assets/logo.svg" alt="Logo">
   </div>
-  <ul v-show="!mobile" class="navigation">
-    <li><router-link class="link" :to="{name: 'Home'}">Home</router-link></li>
-    <li><router-link class="link" :to="{name: ''}">Collection</router-link></li>
-    <li><router-link class="link" :to="{name: ''}">Men</router-link></li>
-    <li><router-link class="link" :to="{name: ''}">Women</router-link></li>
-    <li><router-link class="link" :to="{name: ''}">About</router-link></li>
-    <li><router-link class="link" :to="{name: ''}">Contact</router-link></li>
+  <ul v-show="!mobile" class="header__navigation">
+    <li><router-link class="header__navigation--link" :to="{name: 'Home'}">Home</router-link></li>
+    <li><router-link class="header__navigation--link" :to="{name: ''}">Collection</router-link></li>
+    <li><router-link class="header__navigation--link" :to="{name: ''}">Men</router-link></li>
+    <li><router-link class="header__navigation--link" :to="{name: ''}">Women</router-link></li>
+    <li><router-link class="header__navigation--link" :to="{name: ''}">About</router-link></li>
+    <li><router-link class="header__navigation--link" :to="{name: ''}">Contact</router-link></li>
   </ul>
 
-  <div class="icon">
+  <div class="header__icon">
     <i @click="toggleMobileNav" v-show="mobile" class="fas fa-bars" :class="[mobileNav ? 'fa-times' :'fa-bars' ]"></i>
   </div>
 
@@ -107,12 +107,13 @@ header {
     }
     .link {
       font-size: 14px;
+      font-weight: 500;
       transition: 0.5s ease all;
       padding-bottom: 4px;
-      border-bottom: 1px solid transparent;
+      border-bottom: 3px solid transparent;
       &:hover {
-        color: #000;
-        border-color: #000;
+        color: var(--black);
+        border-color: var(--orange);
       }
     }
     .branding {

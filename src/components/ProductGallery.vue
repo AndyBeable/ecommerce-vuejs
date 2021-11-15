@@ -1,6 +1,7 @@
 <template>
   <div class="image-container">
     <img :src="images[index]" alt="">
+    <img src="../assets/one.jpg" alt="">
 
     <div class="gallery-buttons">
 
