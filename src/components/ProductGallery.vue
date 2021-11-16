@@ -1,7 +1,7 @@
 <template>
   <div class="image-container">
-    <img :src="images[index]" alt="">
-    <img src="../assets/one.jpg" alt="">
+    <img :src="images[index]" alt="" class="product-image">
+<!--    <img src="../assets/one.jpg" alt="">-->
 
     <div class="gallery-buttons">
 
@@ -31,6 +31,7 @@ export default {
       type: Array,
       required: true
     }
+
   },
   data() {
     return {
@@ -81,8 +82,6 @@ export default {
   bottom: 0;
   left: 15px;
   right: 15px;
-
-
 }
 
 .gallery-button {
@@ -94,7 +93,7 @@ export default {
   border: none;
 }
 
-img {
-  width: 100%;
-}
+//img {
+//  width: 100%;
+//}
 </style>

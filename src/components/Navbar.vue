@@ -1,19 +1,19 @@
 <template>
 <header>
 <nav>
-  <div class="header">
+  <div class="branding">
     <img src="@/assets/logo.svg" alt="Logo">
   </div>
-  <ul v-show="!mobile" class="header__navigation">
-    <li><router-link class="header__navigation--link" :to="{name: 'Home'}">Home</router-link></li>
-    <li><router-link class="header__navigation--link" :to="{name: ''}">Collection</router-link></li>
-    <li><router-link class="header__navigation--link" :to="{name: ''}">Men</router-link></li>
-    <li><router-link class="header__navigation--link" :to="{name: ''}">Women</router-link></li>
-    <li><router-link class="header__navigation--link" :to="{name: ''}">About</router-link></li>
-    <li><router-link class="header__navigation--link" :to="{name: ''}">Contact</router-link></li>
+  <ul v-show="!mobile" class="navigation">
+    <li><router-link class="link" :to="{name: 'Home'}">Home</router-link></li>
+    <li><router-link class="link" :to="{name: ''}">Collection</router-link></li>
+    <li><router-link class="link" :to="{name: ''}">Men</router-link></li>
+    <li><router-link class="link" :to="{name: ''}">Women</router-link></li>
+    <li><router-link class="link" :to="{name: ''}">About</router-link></li>
+    <li><router-link class="link" :to="{name: ''}">Contact</router-link></li>
   </ul>
 
-  <div class="header__icon">
+  <div class="icon">
     <i @click="toggleMobileNav" v-show="mobile" class="fas fa-bars" :class="[mobileNav ? 'fa-times' :'fa-bars' ]"></i>
   </div>
 

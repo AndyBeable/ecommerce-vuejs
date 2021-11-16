@@ -23,10 +23,10 @@ export default {
         price: '$125.00'
       },
       images: [
-        '../assets/one.jpg',
-        '../assets/two.jpg',
-        '../assets/three.jpg',
-        '../assets/four.jpg'
+        '/src/assets/one.jpg',
+        '/src/assets/two.jpg',
+        '/src/assets/three.jpg',
+        '/src/assets/four.jpg'
       ]
     }
   }
