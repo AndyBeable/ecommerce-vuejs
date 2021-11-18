@@ -1,15 +1,15 @@
 <template>
   <div class="image-container">
     <img :src="images[index]" alt="" class="product-image">
-<!--    <img src="../assets/one.jpg" alt="">-->
+    <img src="../assets/one.jpg" alt="">
 
     <div class="gallery-buttons">
 
-      <button  @click="previousImage" class="gallery-button">
+      <button  @click.stop="previousImage" class="gallery-button">
         <img src="../assets/icon-previous.svg" alt="">
       </button>
 
-      <button @click="nextImage" class="gallery-button">
+      <button @click.stop="nextImage" class="gallery-button">
         <img src="../assets/icon-next.svg" alt="" class="icon-next">
       </button>
 
@@ -21,6 +21,7 @@
 
 
 export default {
+
   name: "ProductGallery",
   props: {
     thumbnail: {
@@ -31,13 +32,15 @@ export default {
       type: Array,
       required: true
     }
-
   },
   data() {
     return {
       isVisible: false,
       index: 0
     }
+  },
+  mounted() {
+    console.log(this.images[1])
   },
   methods: {
     // showGallery() {
@@ -93,7 +96,7 @@ export default {
   border: none;
 }
 
-//img {
-//  width: 100%;
-//}
+img {
+  width: 100%;
+}
 </style>
