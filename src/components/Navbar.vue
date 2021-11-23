@@ -1,9 +1,14 @@
 <template>
 <header>
 <nav>
+  <div class="icon">
+    <i @click="toggleMobileNav" v-show="mobile" class="fas fa-bars" :class="[mobileNav ? 'fa-times' :'fa-bars' ]"></i>
+  </div>
   <div class="branding">
     <img src="@/assets/logo.svg" alt="Logo">
   </div>
+
+
   <ul v-show="!mobile" class="navigation">
     <li><router-link class="link" :to="{name: 'Home'}">Home</router-link></li>
     <li><router-link class="link" :to="{name: ''}">Collection</router-link></li>
@@ -13,9 +18,7 @@
     <li><router-link class="link" :to="{name: ''}">Contact</router-link></li>
   </ul>
 
-  <div class="icon">
-    <i @click="toggleMobileNav" v-show="mobile" class="fas fa-bars" :class="[mobileNav ? 'fa-times' :'fa-bars' ]"></i>
-  </div>
+
 
 
   <transition name="mobile-nav">
@@ -85,7 +88,9 @@ header {
   nav {
     position: relative;
     display: flex;
+    gap: 1rem;
     flex-direction: row;
+    align-items: center;
     padding: 12px 0;
     transition: 0.5s ease all;
     width: 90%;
@@ -117,8 +122,8 @@ header {
       }
     }
     .branding {
-      display: flex;
-      align-items: center;
+      //display: flex;
+      //align-items: center;
 
       img {
         width: 150px;
@@ -133,12 +138,12 @@ header {
       justify-content: flex-end;
     }
     .icon {
-      display: flex;
-      align-items: center;
-      position: absolute;
-      top: 0;
-      right: 24px;
-      height: 100%;
+      //display: flex;
+      //align-items: center;
+      //position: absolute;
+      //top: 0;
+      //right: 24px;
+      //height: 100%;
 
       i {
         cursor: pointer;
@@ -155,7 +160,7 @@ header {
       max-width: 250px;
       height: 100%;
       background-color: white;
-      top: 0;
+      top: 50px;
       left: 0;
 
       li {
