@@ -129,6 +129,10 @@ header {
 
     }
 
+    .icon {
+      width: 24px;
+    }
+
     .nav_right {
       display: flex;
       align-items: center;
