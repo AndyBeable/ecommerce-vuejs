@@ -1,13 +1,23 @@
 <template>
 <header>
 <nav>
-  <div class="icon">
-    <i @click="toggleMobileNav" v-show="mobile" class="fas fa-bars" :class="[mobileNav ? 'fa-times' :'fa-bars' ]"></i>
-  </div>
-  <div class="branding">
-    <img src="@/assets/logo.svg" alt="Logo">
-  </div>
+   <div class="nav_left">
+      <div class="icon">
+         <i @click="toggleMobileNav" v-show="mobile" class="fas fa-bars" :class="[mobileNav ? 'fa-times' :'fa-bars' ]"></i>
+      </div>
+      <div class="branding">
+        <img src="@/assets/logo.svg" alt="Logo">
+      </div>
+   </div>
+   <div class="nav_right">
+      <div class="cart">
+        <img src="@/assets/icon-cart.svg" alt="">
+      </div>
 
+      <div class="avatar">
+        <img src="@/assets/image-avatar.png" alt="" class="avatar-thumb">
+      </div>
+   </div>
 
   <ul v-show="!mobile" class="navigation">
     <li><router-link class="link" :to="{name: 'Home'}">Home</router-link></li>
@@ -90,6 +100,7 @@ header {
     display: flex;
     gap: 1rem;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     padding: 12px 0;
     transition: 0.5s ease all;
@@ -98,6 +109,7 @@ header {
     @media(min-width: 1140px) {
       max-width: 1140px;
     }
+
     ul,
     .link {
       font-weight: 700;
@@ -110,6 +122,23 @@ header {
       padding: 16px;
       margin-left: 16px;
     }
+    .nav_left {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+    }
+
+    .nav_right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      & .avatar-thumb {
+        width: 100%;
+      }
+    }
+
     .link {
       font-size: 14px;
       font-weight: 500;
@@ -121,15 +150,8 @@ header {
         border-color: var(--orange);
       }
     }
-    .branding {
-      //display: flex;
-      //align-items: center;
 
-      img {
-        width: 150px;
-        transition: 0.5s ease all;
-      }
-    }
+
 
     .navigation {
       display: flex;
@@ -151,6 +173,11 @@ header {
         transition: 0.8s ease all;
         color: #69797D
       }
+    }
+
+    .avatar {
+      width: 25px;
+      height: auto;
     }
     .dropdown-nav {
       display: flex;
